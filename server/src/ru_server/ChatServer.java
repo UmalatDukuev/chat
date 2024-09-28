@@ -13,6 +13,7 @@ public class ChatServer implements TCPConnectionListener {
         new ChatServer();
     }
 
+
     private final ArrayList<TCPConnection> connections = new ArrayList<>();
 
     private ChatServer() {
