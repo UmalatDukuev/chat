@@ -9,6 +9,7 @@ import java.net.Socket;
 import java.nio.charset.Charset;
 
 public class TCPConnection {
+
     private final Socket socket;
     private final Thread rxThread;
     private final TCPConnectionListener eventListener;
@@ -19,7 +20,7 @@ public class TCPConnection {
         this(eventListener, new Socket(ipAddr, port));
     }
 
-    public TCPConnection(Socket socket) throws IOException {
+    public TCPConnection(TCPConnectionListener eventListener, Socket socket) throws IOException {
         this.socket = socket;
         this.eventListener = eventListener;
         in = new BufferedReader(new InputStreamReader(socket.getInputStream(), Charset.forName("UTF-8")));

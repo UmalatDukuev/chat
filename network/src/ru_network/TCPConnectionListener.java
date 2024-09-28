@@ -8,6 +8,6 @@ public interface TCPConnectionListener {
 
     void onDisconnect(TCPConnection tcpConnection);
 
-    void onException(TCPConnection tcpConnection, Exception e)
+    void onException(TCPConnection tcpConnection, Exception e);
 
 }
